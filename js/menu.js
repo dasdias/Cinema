@@ -1,16 +1,16 @@
-const openMenu = (nav, active) => {
+const openMenu = (nav, active) => { // открытие меню
 	nav.classList.add(active)
 }
-const closeMenu = (nav, active) => {
+const closeMenu = (nav, active) => { // закрытие меню
 	nav.classList.remove(active);
 }
 
 
 
-const slideMenu = (settings) => {
+const slideMenu = ({openBtn, menu, classActiveMenu, closeTrigger}) => { 
 
-	const {openBtn, menu, classActiveMenu, closeTrigger} = settings;
-	console.log(openBtn);
+	// const {openBtn, menu, classActiveMenu, closeTrigger} = settings; // Деструкторизация
+	
 	const burgerBtn = document.querySelector(openBtn);
 	const navigation = document.querySelector(menu);
 	const navigationClose = document.querySelectorAll(closeTrigger);
